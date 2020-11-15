@@ -2,6 +2,16 @@ extends "res://Mayan/GenericMayan.gd"
 
 var Spear = load("res://Mayan/Spear.tscn")
 
+var throw_sounds = [
+	preload("res://assets/Sounds/throw_01_session.wav"),
+	preload("res://assets/Sounds/throw_02_session.wav"),
+	preload("res://assets/Sounds/throw_03_session.wav"),
+	preload("res://assets/Sounds/throw_04_session.wav"),
+	preload("res://assets/Sounds/throw_05_session.wav"),
+]
+
+onready var music = $AudioStreamPlayer2D
+
 var timer
 
 func _init():
@@ -33,9 +43,16 @@ func _ready():
 
 
 func throw_spear():
+	_throw_spear_song()
 	var direction_towards_player = _get_player_direction()
 	var b = Spear.instance()
 	b.position = self.global_position
 	b.rotation = direction_towards_player.angle()
 	get_node("/root/World").add_child(b)
 	pass
+
+func _throw_spear_song():
+	var random_song = randi()%throw_sounds.size()
+	music.stream = throw_sounds[random_song]
+	music.play()
+	

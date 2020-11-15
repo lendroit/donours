@@ -79,7 +79,8 @@ func _die():
 		_play_death_sound()
 		animation_player.play("BearDeath")
 		is_dead = true
-		_drop_item()
+		if item_held:
+			_drop_item()
 		emit_signal("player_died")
 
 
