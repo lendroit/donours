@@ -20,6 +20,7 @@ script = ExtResource( 2 )
 environment = SubResource( 1 )
 
 [node name="Gui" parent="." instance=ExtResource( 10 )]
+follow_viewport_enable = true
 
 [node name="GamePad" parent="Gui" instance=ExtResource( 11 )]
 position = Vector2( 501.915, 1282.39 )
