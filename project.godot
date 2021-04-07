@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "GenericMayan",
 "language": "GDScript",
 "path": "res://Mayan/GenericMayan.gd"
+}, {
+"base": "Control",
+"class": "Joystick",
+"language": "GDScript",
+"path": "res://Joystick/Joystick.gd"
 } ]
 _global_script_class_icons={
-"GenericMayan": ""
+"GenericMayan": "",
+"Joystick": ""
 }
 
 [application]
