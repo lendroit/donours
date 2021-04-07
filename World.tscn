@@ -20,7 +20,6 @@ script = ExtResource( 2 )
 environment = SubResource( 1 )
 
 [node name="Gui" parent="." instance=ExtResource( 10 )]
-follow_viewport_enable = true
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 
