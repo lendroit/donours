@@ -1,6 +1,7 @@
 # Godot-specific ignores
 .import/
 export.cfg
+export/
 
 # Imported translations (automatically generated from CSV files)
 *.translation
@@ -11,3 +12,10 @@ data_*/
 
 node_modules
 dist
+
+.tmp
+
+*.apk
+*.apk.idsig
+
+android/build
